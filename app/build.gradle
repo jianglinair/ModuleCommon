@@ -45,5 +45,5 @@ dependencies {
 
     implementation(project(':common'))
 //    implementation 'com.github.jianglinair:ModuleCommon:0.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
 }
