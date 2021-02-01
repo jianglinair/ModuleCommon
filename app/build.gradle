@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'WMRouter'
 }
 
 android {
@@ -45,5 +46,6 @@ dependencies {
 
     implementation(project(':common'))
 //    implementation 'com.github.jianglinair:ModuleCommon:0.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
 }
