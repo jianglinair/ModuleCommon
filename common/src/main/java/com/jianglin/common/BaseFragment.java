@@ -1,6 +1,7 @@
 package com.jianglin.common;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,13 +21,13 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "[NAIPIQ]onCreate: " + tag());
+        Log.d(TAG, "[NAIPIQ]onCreate: " + printTag());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.d(TAG, "[NAIPIQ]onCreateView: " + tag());
+        Log.d(TAG, "[NAIPIQ]onCreateView: " + printTag());
         return inflater.inflate(getLayout(), container, false);
     }
 
@@ -36,16 +37,18 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Log.d(TAG, "[NAIPIQ]onDestroyView: " + tag());
+        Log.d(TAG, "[NAIPIQ]onDestroyView: " + printTag());
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "[NAIPIQ]onDestroy: " + tag());
+        Log.d(TAG, "[NAIPIQ]onDestroy: " + printTag());
     }
 
-    protected String tag() {
-        return TAG;
+    private String printTag() {
+        return TextUtils.isEmpty(tag()) ? TAG : tag();
     }
+
+    protected abstract String tag();
 }

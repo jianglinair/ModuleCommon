@@ -44,6 +44,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation(project(':common'))
-//    implementation 'com.github.jianglinair:ModuleCommon:0.5.1'
+//    implementation 'com.github.jianglinair:ModuleCommon:0.6'
     annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
 }
